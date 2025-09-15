@@ -2,6 +2,7 @@ import CandidateVideo from "./CandidateVideo";
 import LiveCandidateVideo from "./LiveCandidateVideo";
 import Navbar from "./Navbar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import UploadCandidateVideo from "./UploadCandidateVideo";
 
 const Dashboard = () => {
   return (
@@ -30,7 +31,7 @@ const Dashboard = () => {
           </TabsContent>
           <TabsContent value="upload-video">
             <div className="max-w-7xl">
-              Upload
+              <UploadCandidateVideo />
             </div>
           </TabsContent>
           <TabsContent value="review-live">

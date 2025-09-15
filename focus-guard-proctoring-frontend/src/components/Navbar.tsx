@@ -1,8 +1,9 @@
 import logo from "../assets/logo.png";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <header >
+    <header>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -10,21 +11,14 @@ const Navbar = () => {
               <img src={logo} alt="logo" width={40} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">
-                Focus Guard
-              </h1>
+              <h1 className="text-xl font-bold text-gray-900">Focus Guard</h1>
               <p className="text-sm text-gray-600">
                 Focus & Object Detection for Interviews
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 justify-center">
-                <div className="rounded-full p-1 bg-green-600"></div>
-                <p>All systems ready</p>
-            </div>
-          </div>
+          <Button>Watch Demo</Button>
         </div>
       </div>
     </header>
