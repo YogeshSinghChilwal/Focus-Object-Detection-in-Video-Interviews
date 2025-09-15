@@ -26,7 +26,7 @@ const DetectionLogs: React.FC<DetectionLogsProps> = ({
     const sessionDuration = (new Date().getTime() - sessionStartTime.getTime()) / 1000;
     
     // Count actual mobile detections (not just any unknown object)
-    const mobileDetections = detections.filter(d => d.type === 'mobile').length;
+    const mobileDetections = detections.filter(d => d.type === 'mobile' ||  d.type === 'unknown_object').length;
     
     // Count person detections correctly
     const personDetections = detections.filter(d => d.type === 'person').length;
