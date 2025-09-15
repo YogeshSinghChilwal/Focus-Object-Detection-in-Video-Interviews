@@ -1,69 +1,115 @@
-# React + TypeScript + Vite
+# Focus Guard Proctoring Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the Focus Guard Proctoring project, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/YogeshSinghChilwal/Focus-Object-Detection-in-Video-Interviews.git
+   ```
+   ```sh
+   cd focus-guard-proctoring-frontend
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Usage
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+To start the development server with hot reloading:
+```sh
+npm run dev
+```
+The app will be available at [http://localhost:5173](http://localhost:5173) by default.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Production Build
+
+To build the app for production:
+```sh
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To preview the production build locally:
+```sh
+npm run preview
 ```
+
+## 🧹 Linting
+
+To run ESLint:
+```sh
+npm run lint
+```
+
+## 📁 Project Structure
+```
+focus-guard-proctoring-frontend
+    ├── .gitignore
+    ├── README.md
+    ├── components.json
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── public
+        └── favicon.ico
+    ├── src
+        ├── App.tsx
+        ├── assets
+        │   ├── logo.png
+        │   └── videos
+        │   │   ├── demo.mp4
+        │   │   ├── v1.mp4
+        │   │   ├── v2.mp4
+        │   │   └── v3.mp4
+        ├── components
+        │   ├── CandidateVideo.tsx
+        │   ├── Dashboard.tsx
+        │   ├── Demo.tsx
+        │   ├── DetectionLogs.tsx
+        │   ├── DetectionOverlay.tsx
+        │   ├── HomePage.tsx
+        │   ├── LiveCandidateVideo.tsx
+        │   ├── LoadingSpinner.tsx
+        │   ├── Navbar.tsx
+        │   ├── UploadCandidateVideo.tsx
+        │   ├── VideoPlayer.tsx
+        │   ├── WebcamPlayer.tsx
+        │   └── ui
+        │   │   ├── button.tsx
+        │   │   ├── scroll-area.tsx
+        │   │   ├── select.tsx
+        │   │   └── tabs.tsx
+        ├── hooks
+        │   └── useObjectDetection.ts
+        ├── index.css
+        ├── lib
+        │   └── utils.ts
+        ├── main.tsx
+        ├── types
+        │   ├── detection.ts
+        │   └── index.ts
+        ├── utils
+        │   └── contents.ts
+        └── vite-env.d.ts
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+```
+## 📦 Dependencies
+
+- React
+- React Router DOM
+- Tailwind CSS
+- TensorFlow.js
+- Radix UI
+
+---
+
+For backend setup and more details, see the main [README](../README.md).
