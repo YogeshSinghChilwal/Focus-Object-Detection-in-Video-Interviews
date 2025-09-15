@@ -92,8 +92,6 @@ const WebcamPlayer = ({
   }, [videoRef]);
 
   useEffect(() => {
-    let mounted = true;
-
     if (isActive && !streamRef.current && !isInitializing.current) {
       startWebcam();
     } else if (!isActive && streamRef.current) {
@@ -101,7 +99,6 @@ const WebcamPlayer = ({
     }
 
     return () => {
-      mounted = false;
       if (streamRef.current) {
         stopWebcam();
       }
