@@ -1,3 +1,4 @@
+import CandidateVideo from "./CandidateVideo";
 import Navbar from "./Navbar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -22,7 +23,9 @@ const Dashboard = () => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="candidate-video">
-            <div className="md:w-[1000px]">Your table here 1</div>
+            <div className="max-w-7xl">
+              <CandidateVideo />
+            </div>
           </TabsContent>
           <TabsContent value="upload-video">
             <div className="md:w-[1000px]">Your table here 2</div>
