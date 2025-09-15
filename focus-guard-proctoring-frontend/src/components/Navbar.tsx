@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { Button } from "./ui/button";
 
@@ -18,7 +19,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Button>Watch Demo</Button>
+          <Link to={"/demo"}>
+            <Button>Watch Demo</Button>
+          </Link>
         </div>
       </div>
     </header>
